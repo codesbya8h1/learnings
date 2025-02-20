@@ -1,6 +1,9 @@
+import random
+
 def print_board(board):
     """Prints the current state of the board."""
     for row in board:
+        # print(" ".join(row))
         print(" | ".join(row))
         print("-" * 9)
 
@@ -25,12 +28,14 @@ def is_draw(board):
     """Checks if the game is a draw (no empty spaces left)."""
     return all(cell != " " for row in board for cell in row)
 
+        
 def tic_tac_toe():
     """Main function to play Tic-Tac-Toe."""
     # Initialize the board
-    board = [[" " for _ in range(3)] for _ in range(3)]
+    board = [["-" for _ in range(3)] for _ in range(3)]
     players = ["X", "O"]
     current_player = 0
+
 
     print("Welcome to Tic-Tac-Toe!")
     print_board(board)
@@ -46,7 +51,7 @@ def tic_tac_toe():
             if row < 0 or row > 2 or col < 0 or col > 2:
                 print("Invalid input. Please enter numbers between 0 and 2.")
                 continue
-            if board[row][col] != " ":
+            if board[row][col] != "-":
                 print("Cell already taken. Choose another.")
                 continue
 

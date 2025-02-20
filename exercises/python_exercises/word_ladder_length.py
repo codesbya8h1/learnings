@@ -28,6 +28,7 @@ def word_ladder_length(beginWord, endWord, wordList):
                 
                 # Create a new word by replacing one character
                 new_word = current_word[:i] + c + current_word[i+1:]
+                # print(new_word)
 
                 # If the new word is valid and in the word set
                 if new_word in wordSet:
