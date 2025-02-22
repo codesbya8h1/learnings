@@ -12,6 +12,14 @@
 # Constraints:
 # The tree contains at least one node.
 
+
+# Explain
+    # 1. We need to find the maximum sum of a continuous path in a binary tree.
+    # 2. We can start and end at any node in the tree.
+    # 3. The path must be a single continuous sequence of nodes that doesn't split into multiple paths.
+    # 4. We can use a dfs to find the maximum sum of a continuous path in a binary tree.
+    # 5. We can use a nonlocal variable to store the maximum sum of a continuous path in a binary tree.
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
